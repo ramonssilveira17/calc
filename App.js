@@ -4,7 +4,7 @@ import { StyleSheet, Text, View, Button } from 'react-native';
 import InputNumber from './InputNumber';
 
 const buttons = [
-  ['CLEAR', 'DEL'],
+  ['C', 'ELIM'],
   ['7', '8', '9', '%'],
   ['4', '5', '6', 'x'],
   ['1', '2', '3', '-'],
@@ -107,11 +107,11 @@ export default class App extends Component {
         })
         break;
 
-      case 'CLEAR':
+      case 'C':
         this.setState(this.initialState);
         break;
 
-      case 'DEL':
+      case 'ELIM':
         let string = displayValue.toString();
         let deletedString = string.substr(0, string.length - 1);
         let length = string.length;
@@ -151,21 +151,20 @@ const styles = StyleSheet.create({
   resultContainer: {
     flex: 2,
     justifyContent: 'center',
-    backgroundColor: '#ad6e00',
+    backgroundColor: '#292929',
   },
   inputContainer: {
     flex: 8,
-    backgroundColor: '#e08e00',
+    backgroundColor: '#454545',
   },
   resultText: {
     color: 'white',
-    fontSize: 80,
-    fontWeight: 'bold',
-    padding: 20,
+    fontSize: 70,
+    padding: 15,
     textAlign: 'right',
   },
   inputRow: {
     flex: 1,
-    flexDirection: 'row'
+    flexDirection: 'row', 
   }
 });
