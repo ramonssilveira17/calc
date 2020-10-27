@@ -142,6 +142,8 @@ export default class App extends Component {
   }
 }
 
+// thx for the tutorial Quoc Nguyen
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
